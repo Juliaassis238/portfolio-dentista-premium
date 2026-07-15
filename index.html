@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link as_="image" href="capa_nova_v2.webp" rel="preload"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sorriso Studio — Odontologia de Alta Performance</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  img { opacity: 0; transition: opacity 0.5s ease-in; }
+  img.loaded { opacity: 1; }
+
+  img { opacity: 0; transition: opacity 0.5s ease-in; }
+  img.loaded { opacity: 1; }
+
+  img { opacity: 0; transition: opacity 0.5s ease-in; }
+  img.loaded { opacity: 1; }
+
+  img { opacity: 0; transition: opacity 0.5s ease-in; }
+  img.loaded { opacity: 1; }
+
+  img { opacity: 0; transition: opacity 0.5s ease-in; }
+  img.loaded { opacity: 1; }
+
+  :root{
+    --bg:#FDFBF7;
+    --teal:#0B3D3A;
+    --teal-deep:#082B29;
+    --gold:#C9A227;
+    --sand:#F2E9DC;
+    --ink:#1A2422;
+    --line:rgba(11,61,58,0.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{width:100%;overflow-x:hidden;background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;}
+  h1,h2,h3,.display{font-family:'Fraunces',serif;}
+  a{text-decoration:none;color:inherit;}
+  img{display:block;max-width:100%;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px;}
+
+  /* preloader */
+  #preload{position:fixed;inset:0;background:var(--teal);z-index:999;display:flex;align-items:center;justify-content:center;transition:opacity .8s ease, visibility .8s;}
+  #preload svg{width:120px;height:60px;}
+  #preload path{fill:none;stroke:var(--sand);stroke-width:4;stroke-linecap:round;stroke-dasharray:220;stroke-dashoffset:220;animation:draw 1.6s ease forwards;}
+  @keyframes draw{to{stroke-dashoffset:0;}}
+  #preload.done{opacity:0;visibility:hidden;}
+
+  /* nav */
+  header{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 0;transition:.4s;background:rgba(253,251,247,.92);backdrop-filter:blur(10px);}
+  header.scrolled{box-shadow:0 1px 0 var(--line);}
+  nav{display:flex;justify-content:space-between;align-items:center;}
+  .logo{font-size:22px;font-weight:600;letter-spacing:.5px;color:var(--teal);}
+  .logo em{font-style:italic;color:var(--gold);}
+  .navlinks{display:flex;gap:36px;font-size:14px;letter-spacing:.5px;}
+  .navlinks a{position:relative;padding-bottom:4px;color:var(--teal);}
+  .navlinks a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:.3s;}
+  .navlinks a:hover::after{width:100%;}
+  .navcta{border:1px solid var(--teal);padding:10px 22px;border-radius:30px;font-size:13px;transition:.3s;}
+  .navcta:hover{background:var(--teal);color:var(--sand);}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+  .burger span{width:24px;height:2px;background:var(--teal);}
+
+  /* hero */
+  .hero{min-height:100vh;display:flex;align-items:center;position:relative;padding-top:110px;overflow:hidden;}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;width:100%;position:relative;z-index:1;}
+  .eyebrow{display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;}
+  .eyebrow::before{content:'';width:36px;height:1px;background:var(--gold);}
+  .hero h1{font-size:clamp(32px,5vw,64px);font-weight:500;line-height:1.1;color:var(--teal-deep);}
+  .hero h1 i{font-style:italic;color:var(--gold);font-weight:400;}
+  .hero p{margin-top:26px;font-size:17px;line-height:1.7;color:#3f4d4a;max-width:460px;}
+  .hero-actions{display:flex;gap:18px;margin-top:38px;align-items:center;}
+  .btn-primary{background:var(--teal);color:var(--sand);padding:16px 34px;border-radius:40px;font-size:14px;letter-spacing:.5px;display:inline-block;transition:.3s;border:none;cursor:pointer;}
+  .btn-primary:hover{background:var(--teal-deep);transform:translateY(-2px);}
+  .btn-ghost{font-size:14px;border-bottom:1px solid var(--ink);padding-bottom:3px;transition:.3s;}
+  .btn-ghost:hover{color:var(--gold);border-color:var(--gold);}
+
+  .hero-visual{position:relative;height:500px;display:flex;align-items:center;justify-content:center;}
+  .hero-img-main{width:100%;height:100%;object-fit:cover;border-radius:20px;box-shadow:0 30px 60px -20px rgba(11,61,58,0.2);}
+  .hero-img-sub{position:absolute;bottom:-30px;left:-30px;width:200px;height:200px;object-fit:cover;border-radius:15px;border:8px solid var(--bg);box-shadow:0 20px 40px rgba(0,0,0,0.1);animation:float 6s ease-in-out infinite;}
+  .stat-card{position:absolute;top:20px;right:-20px;background:var(--sand);padding:20px;border-radius:15px;box-shadow:0 15px 30px rgba(0,0,0,0.1);z-index:2;}
+  .stat-card .num{font-family:'Fraunces',serif;font-size:28px;color:var(--teal);line-height:1;}
+  .stat-card .lbl{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#5b6c68;margin-top:4px;}
+
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+
+  section{padding:100px 0;}
+  .section-head{margin-bottom:60px;}
+  .section-head h2{font-size:clamp(28px,4vw,42px);color:var(--teal-deep);font-weight:500;line-height:1.2;}
+  .section-head p{margin-top:20px;color:#5b6c68;font-size:16px;line-height:1.7;max-width:600px;}
+
+  /* services */
+  .services-banner{width:100%;height:450px;object-fit:cover;border-radius:20px;margin-bottom:60px;}
+  .carousel{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:30px;}
+  .card{background:var(--sand);border-radius:20px;overflow:hidden;transition:.4s;}
+  .card:hover{transform:translateY(-10px);box-shadow:0 20px 40px rgba(11,61,58,0.15);}
+  .card img{height:220px;width:100%;object-fit:cover;}
+  .card-body{padding:30px;}
+  .card-body .tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;}
+  .card-body h3{margin:12px 0;font-size:22px;color:var(--teal-deep);}
+  .card-body p{font-size:14px;color:#5b6c68;line-height:1.6;}
+
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start;}
+  .contact-info h2{font-size:36px;color:var(--teal-deep);margin-bottom:24px;}
+  .contact-info p{color:#5b6c68;line-height:1.7;margin-bottom:40px;}
+  .info-item{margin-bottom:25px;}
+  .info-item b{display:block;color:var(--teal);font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;}
+  .info-item span{font-size:16px;color:var(--ink);}
+
+  form{background:var(--teal);padding:50px;border-radius:24px;box-shadow:0 30px 60px rgba(11,61,58,0.2);}
+  form .field{margin-bottom:20px;}
+  form label{color:var(--sand);font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;display:block;}
+  form input, form textarea{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);padding:15px;border-radius:10px;color:var(--sand);font-family:inherit;transition:.3s;}
+  form input:focus, form textarea:focus{background:rgba(255,255,255,0.1);border-color:var(--gold);outline:none;}
+  form button{width:100%;background:var(--gold);color:var(--teal-deep);border:none;padding:18px;border-radius:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;cursor:pointer;transition:.3s;}
+  form button:hover{background:var(--white);transform:translateY(-2px);}
+
+  footer{background:var(--teal-deep);color:rgba(242,233,220,0.6);padding:60px 0;text-align:center;}
+  footer .flogo{font-family:'Fraunces',serif;color:var(--sand);font-size:24px;margin-bottom:15px;}
+  footer p{font-size:13px;}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:1s ease;}
+  .reveal.show{opacity:1;transform:translateY(0);}
+
+  @media(max-width:992px){
+    .wrap{padding:0 24px;}
+    .hero-grid{grid-template-columns:1fr;gap:40px;text-align:center;}
+    .hero h1, .hero p{margin-left:auto;margin-right:auto;}
+    .hero-actions{justify-content:center;}
+    .hero-visual{height:400px;max-width:500px;margin:40px auto 0;}
+    .contact-grid{grid-template-columns:1fr;gap:60px;}
+    .navlinks{display:none;}
+    .burger{display:flex;}
+  }
+
+  @media(max-width:600px){
+    section{padding:70px 0;}
+    .hero{padding-top:90px;}
+    .hero-visual{height:320px;}
+    .hero-img-sub{width:140px;height:140px;bottom:-20px;left:-10px;}
+    form{padding:30px;}
+  }
+</style>
+</head>
+<body>
+<div id="preload">
+<svg viewbox="0 0 120 60"><path d="M5,40 Q30,10 60,30 Q90,50 115,20"></path></svg>
+</div>
+<header id="header">
+<div class="wrap">
+<nav>
+<div class="logo">Sorriso <em>Studio</em></div>
+<div class="navlinks">
+<a href="#sobre">A Clínica</a>
+<a href="#servicos">Tratamentos</a>
+<a href="#galeria">Galeria</a>
+<a class="navcta" href="#contato">Agendar consulta</a>
+</div>
+<div class="burger"><span></span><span></span><span></span></div>
+</nav>
+</div>
+</header>
+<section class="hero">
+<div class="wrap hero-grid">
+<div class="reveal">
+<div class="eyebrow">Odontologia estética &amp; funcional</div>
+<h1>Um sorriso é a <i>primeira</i> obra de arte que você mostra ao mundo.</h1>
+<p>Unimos tecnologia de ponta, design de sorriso e um cuidado humano incomum para transformar sua saúde bucal em confiança genuína.</p>
+<div class="hero-actions">
+<a class="btn-primary" href="#contato">Agendar avaliação</a>
+<a class="btn-ghost" href="#servicos">Ver tratamentos</a>
+</div>
+</div>
+<div class="hero-visual reveal">
+<img alt="Consultório Sorriso Studio" class="hero-img-main" decoding="async" fetchpriority="high" loading="eager" src="capa_nova_v2.webp"/>
+<img alt="Sorriso Perfeito" class="hero-img-sub" decoding="async" fetchpriority="high" loading="lazy" src="img_0_v2.webp"/>
+<div class="stat-card">
+<div class="num">18 anos</div>
+<div class="lbl">de excelência</div>
+</div>
+</div>
+</div>
+</section>
+<section id="sobre">
+<div class="wrap">
+<div class="section-head reveal">
+<h2>Cuidado clínico com sensibilidade de estúdio de design.</h2>
+<p>Cada detalhe do Sorriso Studio foi pensado para reduzir a ansiedade e elevar o resultado, unindo precisão técnica e conforto sensorial.</p>
+</div>
+<img alt="Nossa Equipe" class="services-banner reveal" decoding="async" loading="lazy" src="img_1_v2.webp"/>
+</div>
+</section>
+<section class="services" id="servicos">
+<div class="wrap">
+<div class="section-head reveal">
+<h2>Tratamentos assinados pela nossa equipe.</h2>
+<p>Da rotina à reabilitação completa, cada procedimento segue nosso protocolo de excelência.</p>
+</div>
+<div class="carousel reveal">
+<div class="card">
+<img alt="Clareamento" decoding="async" loading="lazy" src="dental_treatment_1.webp"/>
+<div class="card-body">
+<div class="tag">Estética</div>
+<h3>Clareamento a Laser</h3>
+<p>Resultados visíveis em uma única sessão, com proteção total do esmalte.</p>
+</div>
+</div>
+<div class="card">
+<img alt="Implantes" decoding="async" loading="lazy" src="dental_treatment_2.webp"/>
+<div class="card-body">
+<div class="tag">Reabilitação</div>
+<h3>Implantes &amp; Próteses</h3>
+<p>Tecnologia guiada por computador para implantes com previsibilidade total.</p>
+</div>
+</div>
+<div class="card">
+<img alt="Ortodontia" decoding="async" loading="lazy" src="dental_treatment_3.webp"/>
+<div class="card-body">
+<div class="tag">Ortodontia</div>
+<h3>Alinhadores Invisíveis</h3>
+<p>Movimentação dentária discreta com acompanhamento digital 3D.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="contato">
+<div class="wrap contact-grid">
+<div class="contact-info reveal">
+<h2>Vamos cuidar do seu sorriso.</h2>
+<p>Agende uma avaliação e conheça de perto nossa estrutura e equipe clínica.</p>
+<div class="info-item">
+<b>Endereço</b>
+<span>Av. das Palmeiras, 480 — Jardim Europa, São Paulo</span>
+</div>
+<div class="info-item">
+<b>Horário</b>
+<span>Seg a Sáb — 08h às 20h</span>
+</div>
+<div class="info-item">
+<b>Contato</b>
+<span>(11) 4002-8922 · contato@sorrisostudio.com.br</span>
+</div>
+</div>
+<form class="reveal">
+<div class="field">
+<label>Nome Completo</label>
+<input placeholder="Seu nome" type="text"/>
+</div>
+<div class="field">
+<label>WhatsApp</label>
+<input placeholder="(11) 99999-9999" type="text"/>
+</div>
+<div class="field">
+<label>Mensagem</label>
+<textarea placeholder="Como podemos ajudar?" rows="4"></textarea>
+</div>
+<button type="submit">Solicitar Agendamento</button>
+</form>
+</div>
+</section>
+<footer>
+<div class="wrap">
+<div class="flogo">Sorriso Studio</div>
+<p>© 2026 Sorriso Studio Odontologia. Todos os direitos reservados.</p>
+<p style="margin-top:10px; font-size:11px; opacity:0.5;">Design por Júlia Assis</p>
+</div>
+</footer>
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('preload').classList.add('done');
+    }, 1000);
+  });
+
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach(el => observer.observe(el));
+
+  window.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+    header.classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', () => img.classList.add('loaded'));
+    }
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', () => img.classList.add('loaded'));
+    }
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', () => img.classList.add('loaded'));
+    }
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', () => img.classList.add('loaded'));
+    }
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', () => img.classList.add('loaded'));
+    }
+  });
+});
+</script>
+</body>
+</html>
